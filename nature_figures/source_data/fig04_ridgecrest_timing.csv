@@ -1,0 +1,6 @@
+t_gt_s,t_pred_s,t_first_s,pred_idx,pred_t_s,gt_pixels,pred_pixels,paper_gt,paper_pred
+2.0,8.0,2.7203848361968994,7,8.13559341430664,210,101,pku_timing_0_t0.0s.png,pred_timing_0_t0.0s.png
+4.0,12.0,2.7203848361968994,13,12.203390121459961,284,335,pku_timing_1_t4.0s.png,pred_timing_4_t12.0s.png
+6.0,14.0,2.7203848361968994,16,14.237288475036621,380,490,pku_timing_3_t12.0s.png,pred_timing_5_t13.0s.png
+9.0,16.0,2.7203848361968994,19,16.27118682861328,488,607,pku_timing_4_t16.0s.png,pred_timing_6_t16.0s.png
+12.0,20.0,2.7203848361968994,24,19.6610164642334,494,881,pku_timing_5_t20.0s.png,pred_timing_8_t20.0s.png

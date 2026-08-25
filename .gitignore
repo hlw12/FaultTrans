@@ -1,0 +1,10 @@
+# Trained weights (kept local, not published)
+*.pth
+*.pt
+*.ckpt
+checkpoints_*/
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/

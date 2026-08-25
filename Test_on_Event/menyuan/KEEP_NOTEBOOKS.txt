@@ -1,0 +1,3 @@
+Paper-locked Chi-Chi / Menyuan notebooks.
+Do not delete. Do not re-run onto live pred_*.npy / pgv_fields.npy.
+Live arrays stay as-is; these .ipynb files are for inspection only.
