@@ -1,0 +1,46 @@
+
+gmpe_pool:
+  ASK14:
+    class: AbrahamsonEtAl2014
+    module: openquake.hazardlib.gsim.abrahamson_2014
+    weight: 0.25
+    requires:
+      - z1pt0
+      - rx
+      - rrup
+      - rjb
+
+  BSSA14:
+    class: BooreEtAl2014
+    module: openquake.hazardlib.gsim.boore_2014
+    weight: 0.25
+    requires:
+      - rjb
+      - z1pt0
+
+  CB14:
+    class: CampbellBozorgnia2014
+    module: openquake.hazardlib.gsim.campbell_bozorgnia_2014
+    weight: 0.25
+    requires:
+      - rrup
+      - z2pt5
+
+  CY14:
+    class: ChiouYoungs2014
+    module: openquake.hazardlib.gsim.chiou_youngs_2014
+    weight: 0.25
+    requires:
+      - rrup
+      - rjb
+      - rx
+      - z1pt0
+
+fallback:
+  c1: 0.03
+  c2: 0.50
+  c3: -0.66
+  h_km: 10.0
+  site_amp_coeff: 0.30
+  vs30_ref: 760.0
+  sigma: 0.65

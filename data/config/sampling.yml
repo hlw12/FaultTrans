@@ -1,0 +1,84 @@
+# ============================================================
+#  Dataset Sampling Configuration
+#  Controls diversity of generated earthquake scenarios
+# ============================================================
+
+n_events: 5000
+
+magnitude:
+  min: 6.0
+  max: 7.8
+  distribution: uniform      
+
+initial_magnitude_offset:
+  min: 1.8                    # M_final - offset = M_initial
+  max: 2.8
+
+depth_km:
+  min: 5.0
+  max: 30.0
+  distribution: uniform
+
+dip_deg:
+  min: 50.0
+  max: 90.0
+
+rake_deg:
+  distribution: uniform_per_type
+  strike_slip:
+    range: [-30.0, 30.0]     
+    weight: 0.35
+  reverse:
+    range: [60.0, 120.0]      
+    weight: 0.25
+  normal:
+    range: [-120.0, -60.0]    
+    weight: 0.20
+  oblique_rs:
+    range: [30.0, 60.0]       
+    weight: 0.10
+  oblique_ns:
+    range: [-60.0, -30.0] 
+    weight: 0.10
+
+fault_type:
+  linear:              0.20
+  polyline:            0.30
+  bilateral:           0.20
+  bilateral_polyline:  0.30
+
+n_fault_segments:
+  min: 2
+  max: 4
+
+max_strike_change_deg:
+  min: 10.0
+  max: 90.0
+
+bilateral_ratio:             
+  min: 0.65
+  max: 0.80
+
+magnitude_evolution_type:
+  logistic:     0.25
+  linear:       0.25
+  exponential:  0.25
+  sqrt:         0.25
+
+rupture_velocity_km_s:
+  min: 2.0
+  max: 3.0
+
+# --- Simulation grid ---
+grid_size:        150
+resolution_deg:   0.01         # ~1 km per grid
+total_duration_s: 40.0
+n_time_steps:     20           # uniformly spaced over total_duration
+n_stations:       50
+
+# --- Site conditions ---
+vs30_mean:
+  min: 300.0
+  max: 700.0
+vs30_std_fraction: 0.30        # std = mean * fraction
+s_wave_velocity_km_s: 3.5

@@ -4,6 +4,9 @@
 *.ckpt
 checkpoints_*/
 
+# Synthetic training HDF5 (too large for git)
+*.h5
+
 # Python
 __pycache__/
 *.py[cod]
